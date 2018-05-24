@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="data">
+      <h2>通过AJAX改变文本</h2>
+    </div>
+<button id="b02">获取</button>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#b02").click(function(){
+           $.get('text.txt',function(data){
+               $("#data").html(data);
+           });   
+            });
+        });
+   
+</script>
+</body>
+</html>
